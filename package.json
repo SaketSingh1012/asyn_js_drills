@@ -1,0 +1,18 @@
+{
+  "name": "asyn_js_drills",
+  "version": "1.0.0",
+  "description": "exercises",
+  "main": "problem1.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}

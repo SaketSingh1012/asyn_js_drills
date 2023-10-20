@@ -4,8 +4,8 @@ const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
 const unlink = promisify(fs.unlink);
 
-const inputFilename = 'lipsum.txt';
-const filenamesFilename = 'filenames.txt';
+const inputFilename = '../lipsum.txt';
+const filenamesFilename = '../filenames.txt';
 
 async function readInputFile() {
   try {
@@ -77,7 +77,7 @@ async function readAndDeleteFiles() {
 
 async function main() {
   try {
-    await writeFile(filenamesFilename, '', { flag: 'w' });
+    await writeFile(`${filenamesFilename}`, '', { flag: 'w' });
     const inputText = await readInputFile();
     const uppercaseText = await convertToUppercase(inputText);
     const sentences = await convertToLowercaseAndSplit(inputText);
@@ -91,4 +91,4 @@ async function main() {
   }
 }
 
-main();
+module.exports = main;
